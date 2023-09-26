@@ -17,7 +17,7 @@ const AboutPage = () => {
       Tengo 20 años y actualmente estoy estudiando Ingeniería en Sistemas de Información en la UTN Regional Buenos Aires. Comencé con el mundo del desarrollo durante mi último año de secundaria y en 2021 me decanté por el desarrollo web.
     </p>
     <p className="mt-4">
-      Aprendí de manera autodidacta varias tecnologías como JavaScript, Node.js, HTML y CSS, entre otros. En el proceso, tomé distintos cursos de programación para poder mejorar mi código y hacerlo más limpio y eficiente. En 2022, profundice mi conomiento de React.js, Express, bases de datos y cómo estructurar un proyecto full-stack, que era lo que al principio más me costaba.
+      Aprendí de manera autodidacta varias tecnologías como JavaScript, Node.js, HTML y CSS, entre otros. En el proceso, tomé distintos cursos de programación para poder mejorar mi código y hacerlo más limpio y eficiente. En 2022, profundicé mi conocimiento de React.js, Express, bases de datos y cómo estructurar un proyecto full-stack, que era lo que al principio más me costaba.
     </p>
     <p className="mt-4">
       Todo el mundo del desarrollo de software me apasiona. El poder aprender nuevas tecnologías me parece emocionante. Actualmente, sigo puliendo mis habilidades en JavaScript, pero también estoy estudiando otros lenguajes para poder aplicar en el backend. Me encanta explorar nuevas tecnologías más rápidas y eficientes que las que tenemos actualmente.

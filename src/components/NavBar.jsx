@@ -18,7 +18,7 @@ const NavBar = () => {
           <a className="my-4 text-white text-xl font-bold">Inicio</a>
         </Link>
         <Link href="/about" legacyBehavior>
-          <a className="my-4 text-white text-xl font-bold">Sobre mi</a>
+          <a className="my-4 text-white text-xl font-bold">Sobre mí</a>
         </Link>
         <Link href="/projects" legacyBehavior>
           <a className="my-4 text-white text-xl font-bold">Proyectos</a>
