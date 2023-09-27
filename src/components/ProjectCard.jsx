@@ -26,10 +26,10 @@ const ProjectCard = ({ title, description, image, technologies, link, github }) 
                     ))}
                 </div>
                 <div className="mt-2">
-                    <a href={link} className="bg-blue-500 text-white px-3 py-1 rounded-md mr-2 hover:bg-blue-600 text-sm">
+                    <a target="_blank" href={link} className="bg-blue-500 text-white px-3 py-1 rounded-md mr-2 hover:bg-blue-600 text-sm">
                         Deploy
                     </a>
-                    <a href={github} className="text-blue-500 hover:underline text-sm">
+                    <a target="_blank" href={github} className="text-blue-500 hover:underline text-sm">
                         Repositorio Github
                     </a>
                 </div>
