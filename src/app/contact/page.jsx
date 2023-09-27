@@ -2,11 +2,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import loadingImage from "@/assets/loading-25.gif"
+import { validator } from "@/validators/validatorContact";
 
 const Page = () => {
 
     const [isLoading, setIsLoading] = useState(false)
     const [sentEmail, setSentEmail] = useState(false)
+    const [isError, setIsError] = useState(false)
 
     const [info, setInfo] = useState({
         name: "",
@@ -19,10 +21,14 @@ const Page = () => {
             ...info,
             [e.target.name]: e.target.value
         })
+        setIsError(false)
     }
 
     const handlerSubmit = async e => {
         e.preventDefault()
+
+        if (!validator(info.contact)) return setIsError(true)
+
         setIsLoading(true)
         const res = await fetch("/api/send", {
             method: "POST",
@@ -47,6 +53,7 @@ const Page = () => {
                 <div className="mb-2">
                     <label className="block text-gray-600 text-sm font-medium">Nombre:</label>
                     <input
+                        placeholder="nombre empresa o el suyo"
                         onChange={handlerChange}
                         type="text"
                         name="name"
@@ -57,6 +64,7 @@ const Page = () => {
                 <div className="mb-2">
                     <label className="block text-gray-600 text-sm font-medium">Trabajo:</label>
                     <textarea
+                        placeholder="breve descripcion del cargo o el rol que necesite"
                         onChange={handlerChange}
                         name="work"
                         cols="30"
@@ -68,12 +76,14 @@ const Page = () => {
                 <div className="mb-2">
                     <label className="block text-gray-600 text-sm font-medium">Medio de contacto:</label>
                     <input
+                        placeholder="email o numero de telefono"
                         onChange={handlerChange}
                         type="text"
                         name="contact"
                         value={info.contact}
                         className="w-full p-1 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500"
                     />
+                    {isError && <>lo que ingreso es invalido, intente con un email o telefono</>}
                 </div>
                 <div className="text-center flex items-center justify-center">
                     {
