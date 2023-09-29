@@ -64,7 +64,7 @@ const Page = () => {
                 <div className="mb-2">
                     <label className="block text-gray-600 text-sm font-medium">Trabajo:</label>
                     <textarea
-                        placeholder="breve descripcion del cargo o el rol que necesite"
+                        placeholder="breve descripción del cargo o el rol que necesite"
                         onChange={handlerChange}
                         name="work"
                         cols="30"
